@@ -506,7 +506,7 @@ class Project(object):
         """
         # Calculate contacts before stratigraphic column
         self.map_data.extract_all_contacts()
-
+        print('I am here 100')
         # Calculate the stratigraphic column
         if issubclass(type(user_defined_stratigraphic_column), list):
             self.stratigraphic_column.column = user_defined_stratigraphic_column
@@ -517,7 +517,7 @@ class Project(object):
                 )
             self.calculate_stratigraphic_order(take_best)
         self.sort_stratigraphic_column()
-
+        print('I am here 101')
         # Calculate basal contacts based on stratigraphic column
         self.extract_geology_contacts()
         self.sample_map_data()
